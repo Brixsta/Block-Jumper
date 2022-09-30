@@ -216,16 +216,16 @@ class Obstacle {
       this.moveSpeed = 15;
     }
     if (game.score > 3000) {
-      this.moveSpeed = 17;
+      this.moveSpeed = 20;
     }
   }
 
   isCollide() {
     if (
       player.x < this.x + this.width &&
-      player.x + player.width - 3 > this.x &&
+      player.x + player.width > this.x &&
       player.y < this.y + this.height &&
-      player.y + player.height - 11 > this.y
+      player.y + player.height > this.y
     ) {
       if (game.inPlay) {
         game.inPlay = false;
